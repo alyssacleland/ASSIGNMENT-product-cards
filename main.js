@@ -74,7 +74,7 @@ const products = [
 const targetingApp = document.querySelector("#app");
 let domString = "";
 for (const product of products) {
-domString+= `<div class="card" style="width: 18rem;">
+  const cardHTML = `<div class="card" style="width: 18rem;">
   <header>
     <h2> ${product.name} </h2>
   </header>
@@ -101,5 +101,8 @@ domString+= `<div class="card" style="width: 18rem;">
   </div>
 </div>
 `;
+
+console.log(cardHTML);
+domString += cardHTML;
 };
 targetingApp.innerHTML = domString;
